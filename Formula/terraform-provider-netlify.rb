@@ -24,6 +24,10 @@ class TerraformProviderNetlify < Formula
       provider_installation {
         filesystem_mirror {
           path    = "#{HOMEBREW_PREFIX}/etc/terraform/providers"
+          include = ["terraform.homebrew"]
+        }
+        direct {
+          include = ["*/*"]
         }
       }
 
